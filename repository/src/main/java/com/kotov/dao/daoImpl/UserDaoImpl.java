@@ -5,6 +5,7 @@ import com.kotov.model.UserModel;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
+
 import java.util.List;
 
 @Repository("userDAO")

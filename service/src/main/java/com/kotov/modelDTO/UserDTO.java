@@ -31,14 +31,14 @@ public class UserDTO implements Serializable {
     private String address;
 
     @NotNull
-    @Size(min=7, max=20, message = "{reg.user.passwordNotInRange}")
+    @Size(min = 7, max = 20, message = "{reg.user.passwordNotInRange}")
     private String password;
 
     @NotNull
     private String confirmPassword;
     private Boolean isActive;
 
-    @Size(max=2000, message = "{reg.user.tooLongValue}")
+    @Size(max = 2000, message = "{reg.user.tooLongValue}")
     private String addInfo;
     private RoleModel role;
     private List<OrderDTO> orders = new ArrayList<>();

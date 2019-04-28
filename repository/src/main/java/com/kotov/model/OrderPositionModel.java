@@ -1,7 +1,9 @@
 package com.kotov.model;
 
 import javax.persistence.*;
+
 import java.io.Serializable;
+
 
 @Entity
 @Table(name="ordersPosition")

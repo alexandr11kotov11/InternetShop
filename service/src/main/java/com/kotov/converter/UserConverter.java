@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UserConverter {
 
-    public static UserDTO toDTO(UserModel userModel, Boolean loadOrders){
+    public static UserDTO toDTO(UserModel userModel, Boolean loadOrders) {
         UserDTO userDTO = new UserDTO();
         userDTO.setId(userModel.getId());
         userDTO.setRole(userModel.getRoleModel());
@@ -24,10 +24,10 @@ public class UserConverter {
         userDTO.setPassword(userModel.getPassword());
         userDTO.setPhone(userModel.getPhone());
 
-        if(loadOrders){
-            List<OrderModel> orders = userModel.();
+        if (loadOrders) {
+            List<OrderModel> orders = userModel. ();
             List<OrderDTO> orderDTOList = new ArrayList<>();
-            for (OrderModel order: orders) {
+            for (OrderModel order : orders) {
                 orderDTOList.add(OrderConverter.toDTO(order, userDTO));
             }
             userDTO.setOrders(orderDTOList);
@@ -35,7 +35,7 @@ public class UserConverter {
         return userDTO;
     }
 
-    public static UserModel fromDTO(UserDTO userDTO, boolean setOrders){
+    public static UserModel fromDTO(UserDTO userDTO, boolean setOrders) {
         UserModel userModel = new User();
         userModel.setId(userDTO.getId());
         userModel.setRoleModel(userDTO.getRole());
@@ -47,8 +47,8 @@ public class UserConverter {
         userModel.setPassword(userDTO.getPassword());
         userModel.setPhone(userDTO.getPhone());
 
-        if(userDTO.getOrders() != null && userDTO.getOrders().size() > 0 && setOrders){
-            for(OrderDTO orderDTO: userDTO.getOrders()){
+        if (userDTO.getOrders() != null && userDTO.getOrders().size() > 0 && setOrders) {
+            for (OrderDTO orderDTO : userDTO.getOrders()) {
                 userDTO.getOrders().add(OrderConverter.fromDTO(orderDTO));
             }
         }

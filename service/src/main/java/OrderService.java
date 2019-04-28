@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-public interface OrderService  {
+public interface OrderService {
 
-    OrderDTO generateOrder (UserDTO user);
+    OrderDTO generateOrder(UserDTO user);
 
     @Transactional
     Long addNewOrder(OrderDTO orderDTO);
@@ -18,7 +18,7 @@ public interface OrderService  {
 
     BigDecimal getTotalPrice(OrderDTO order);
 
-   // @Transactional
+    // @Transactional
     //void updateOrderStatus(Long id, OrderStatus status);
 
     @Transactional(readOnly = true)

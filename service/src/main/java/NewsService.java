@@ -1,7 +1,6 @@
 import com.kotov.modelDTO.NewsDTO;
 import javafx.scene.control.Pagination;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
 public interface NewsService {

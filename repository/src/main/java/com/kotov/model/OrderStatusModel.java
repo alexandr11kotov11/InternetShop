@@ -3,33 +3,30 @@ package com.kotov.model;
 
 public enum OrderStatusModel {
 
-    NEW{
+    NEW {
         @Override
-        public String toString(){
+        public String toString() {
             return "New product";
         }
     },
-    PRODUCT_ASSEMBLY{
+    PRODUCT_ASSEMBLY {
         @Override
-        public String toString(){
+        public String toString() {
             return "Product assembly";
         }
     },
-    IN_MOVED{
+    IN_MOVED {
         @Override
-        public String toString(){
+        public String toString() {
             return "The product is on the way";
         }
     },
-    DELIVERED{
+    DELIVERED {
         @Override
-        public String toString(){
+        public String toString() {
             return "Delivered";
         }
     }
-
-
-
 
 
 }

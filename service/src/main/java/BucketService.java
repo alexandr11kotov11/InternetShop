@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.util.Map;
 import java.util.Set;
 
+
 public interface BucketService {
 
     @Transactional(readOnly = true)
@@ -29,8 +30,6 @@ public interface BucketService {
 
     @Transactional(readOnly = true)
     void loadOrderToBucket(Long orderId);
-
-
 
 
 }

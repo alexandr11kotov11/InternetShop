@@ -1,6 +1,5 @@
 package com.kotov.modelDTO;
 
-
 import com.kotov.model.OrderStatusModel;
 
 import java.math.BigDecimal;

@@ -13,6 +13,7 @@
   <packaging>war</packaging>
   <name>webapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -20,6 +21,7 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+	
   </dependencies>
   <build>
     <finalName>webapp</finalName>

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="roles")
+@Table(name = "roles")
 public class RoleModel implements Serializable {
 
     private static final long serialVersionUID = -8517820276904825606L;
@@ -28,7 +28,7 @@ public class RoleModel implements Serializable {
         this.id = id;
     }
 
-    @Column(name="r_position")
+    @Column(name = "r_position")
     public String getName() {
         return name;
     }
@@ -36,6 +36,7 @@ public class RoleModel implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
     @OneToMany(mappedBy = "role")
     public List<UserModel> getUsers() {
         return users;

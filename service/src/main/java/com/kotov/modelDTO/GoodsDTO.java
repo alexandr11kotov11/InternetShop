@@ -12,7 +12,6 @@ public class GoodsDTO {
     private Boolean isActive;
     //private MultipartFile image;
 
-
     public Long getId() {
         return id;
     }
@@ -60,4 +59,5 @@ public class GoodsDTO {
     public void setActive(Boolean active) {
         isActive = active;
     }
+
 }

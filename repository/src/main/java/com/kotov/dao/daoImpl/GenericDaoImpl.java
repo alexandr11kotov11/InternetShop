@@ -67,23 +67,28 @@ public abstract class GenericDaoImpl<T extends Serializable, ID extends Number> 
     }
 
     @Override
-    public Integer getRowCount(){
+    public Integer getRowCount() {
         String countStr = sessionFactory.getCurrentSession().createQuery("SELECT COUNT(*) as count FROM " + entityClass.getName()).uniqueResult().toString();
         Integer count = null;
         try {
             count = Integer.parseInt(countStr);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return count;
     }
 
-    protected String OrderToInstruction(SortOrders order){
-        switch (order){
-            case ASC: return " id ASC";
-            case DESC: return " id DESC";
-            case RAPID: return " RAPID()";
-            default: return " id ASC";
+    protected String OrderToInstruction(SortOrders order) {
+        switch (order) {
+            case ASC:
+                return " id ASC";
+            case DESC:
+                return " id DESC";
+            case RAPID:
+                return " RAPID()";
+            default:
+                return " id ASC";
         }
-    }}
+    }
+}
 

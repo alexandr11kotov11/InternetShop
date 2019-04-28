@@ -12,7 +12,7 @@ public class FeedbackDTO {
     @Email(message = "{feedback.email.invalid}")
     private String email;
 
-    @Size(min=1, max=2000, message = "{feedback.tooLongValue}")
+    @Size(min = 1, max = 2000, message = "{feedback.tooLongValue}")
     private String message;
 
     public Long getId() {

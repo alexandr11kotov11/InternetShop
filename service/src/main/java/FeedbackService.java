@@ -3,6 +3,4 @@ import org.springframework.transaction.annotation.Transactional;
 
 public interface FeedbackService {
     @Transactional
-    void save(FeedbackDTO feedback);
-
-}
+    void save(FeedbackDTO feedback);}

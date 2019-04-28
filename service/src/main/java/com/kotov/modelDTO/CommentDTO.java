@@ -7,6 +7,7 @@ public class CommentDTO {
     private String message;
     private UserDTO user;
 
+
     public Long getId() {
         return id;
     }

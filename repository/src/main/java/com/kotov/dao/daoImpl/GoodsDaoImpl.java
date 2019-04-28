@@ -32,16 +32,16 @@ public class GoodsDaoImpl extends GenericDaoImpl<GoodsModel, Long> implements Go
 
     @Override
     public List<GoodsModel> getAll() {
-        return sessionFactory.getCurrentSession().createQuery("FROM " + entityClass.getName() +" WHERE isActive = true").list();
+        return sessionFactory.getCurrentSession().createQuery("FROM " + entityClass.getName() + " WHERE isActive = true").list();
     }
 
     @Override
-    public Integer getRowCount(){
-        String countStr = sessionFactory.getCurrentSession().createQuery("SELECT COUNT(*) as count FROM " + entityClass.getName()+" WHERE isActive = true").uniqueResult().toString();
+    public Integer getRowCount() {
+        String countStr = sessionFactory.getCurrentSession().createQuery("SELECT COUNT(*) as count FROM " + entityClass.getName() + " WHERE isActive = true").uniqueResult().toString();
         Integer count = null;
         try {
             count = Integer.parseInt(countStr);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return count;
@@ -64,7 +64,7 @@ public class GoodsDaoImpl extends GenericDaoImpl<GoodsModel, Long> implements Go
         return true;
     }
 
-    public boolean hardDelete(GoodsModel bean){
+    public boolean hardDelete(GoodsModel bean) {
         return super.delete(bean);
     }
 }

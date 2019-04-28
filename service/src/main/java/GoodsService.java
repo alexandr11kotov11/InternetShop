@@ -1,7 +1,6 @@
 import com.kotov.modelDTO.GoodsDTO;
 import javafx.scene.control.Pagination;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.swing.*;
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.kotov.exception;
 
 
-public class ExceptionForUser extends RuntimeException{
+public class ExceptionForUser extends RuntimeException {
 
     public ExceptionForUser() {
     }

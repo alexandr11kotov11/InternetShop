@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="orders")
+@Table(name = "orders")
 
 public class OrderModel implements Serializable {
     private static final long serialVersionUID = -8517820276904825606L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="o_id")
+    @Column(name = "o_id")
     private Long id;
 
-    @Column(name="o_status")
+    @Column(name = "o_status")
     private Integer status;
 
     @ManyToOne

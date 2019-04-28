@@ -21,9 +21,9 @@ public class OrderConverter {
             orderDTO.setUser(userDTO);
         }
 
-        if(orderModel.getStatus().equals(OrderStatusModel.NEW)){
+        if (orderModel.getStatus().equals(OrderStatusModel.NEW)) {
             orderDTO.setPossibleToEdit(true);
-        }else{
+        } else {
             orderDTO.setPossibleToEdit(false);
         }
 
@@ -41,9 +41,9 @@ public class OrderConverter {
         Order order = new Order();
         order.setId(orderDTO.getId());
         order.setStatus(orderDTO.getStatus());
-        order.setUser(UserConverter.fromDTO(orderDTO.getUser(),false));
+        order.setUser(UserConverter.fromDTO(orderDTO.getUser(), false));
 
-        for(Map.Entry<ProductDTO, Integer> product: orderDTO.getProducts().entrySet()){
+        for (Map.Entry<ProductDTO, Integer> product : orderDTO.getProducts().entrySet()) {
             OrderPosition orderPosition = new OrderPosition();
             orderPosition.setProduct(ProductConverter.fromDTO(product.getKey()));
             orderPosition.setCount(product.getValue());
@@ -52,9 +52,9 @@ public class OrderConverter {
         return order;
     }
 
-    public static List<OrderDTO> toDTO(List<Order> orders){
+    public static List<OrderDTO> toDTO(List<Order> orders) {
         List<OrderDTO> orderDTOS = new ArrayList<>();
-        for(Order order: orders){
+        for (Order order : orders) {
             orderDTOS.add(toDTO(order, null));
         }
         return orderDTOS;

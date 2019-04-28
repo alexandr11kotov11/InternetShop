@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
+  
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -28,10 +29,12 @@
       <artifactId>hibernate-validator</artifactId>
       <version>5.2.4.Final</version>
     </dependency>
-  <dependency>
+
+	<dependency>
     <groupId>com.kotov</groupId>
     <artifactId>repository</artifactId>
     <version>1.0-SNAPSHOT</version>
   </dependency>
+  
 </dependencies>
 </project>

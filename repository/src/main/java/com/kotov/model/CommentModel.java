@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="comments")
+@Table(name = "comments")
 public class CommentModel implements Serializable {
 
     private static final long serialVersionUID = 7292977697458781532L;
@@ -21,7 +21,6 @@ public class CommentModel implements Serializable {
     @ManyToOne
     @JoinColumn(name = "C_user_id")
     private UserModel usermODEL;
-
 
 
 }
